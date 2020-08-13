@@ -4,8 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="container">
+        <h1>Player <span id="player">1</span> Turn</h1>
+        <!-- need to get these two to be beside each other -->
+        <div class="player1 row">
+            Score: <span id="p1Score">4</span>
+            <div class="dice">
+                <p>-</p>
+            </div>
+        </div>
+        <div class="player2 row">
+            Score: <span id="p2Score">3</span>
+                        <div class="dice">
+                           <p>-</p>
+                        </div>
+        </div>
+        <div class="bottom">
+             <button class="btn" id="roll">Roll Dice</button>
+             <button id="reset" class="btn">Reset Game</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
