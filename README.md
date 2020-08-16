@@ -1,2 +1,5 @@
 # dice-game
-The Pig Game - redone for 2020!
+Roll the Dice.
+Get to 20 first.
+
+Courtesy of scrimba
