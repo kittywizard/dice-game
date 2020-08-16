@@ -17,10 +17,12 @@ const p2ScoreDisplay = document.getElementById("p2Score");
 const p1Dice = document.getElementById('p1Dice');
 const p2Dice = document.getElementById('p2Dice'); 
 
-const rollBtn = document.getElementById("roll").addEventListener('click', rollDice);
+const rollBtn = document.getElementById("roll");
 const resetBtn = document.getElementById("reset");
 
+//set event listeners
 resetBtn.addEventListener('click', resetGame);
+rollBtn.addEventListener('click', rollDice);
 
 //roll the dice when button is clicked
 function rollDice(){
@@ -58,29 +60,47 @@ function checkWinner(score) {
     //checking current player's score against the win condition
     if(score >= 20){
         if(currentTurn){
-            message.style.color = "#1bbe8d";
-            message.textContent = "Player 1 Wins!";
+            updateWinner(1);
         } else {
-            message.style.color = "#1bbe8d";
-            message.textContent = "Player 2 Wins!";
+            updateWinner(2);
         }
     }
 }
 
+function updateWinner(player) {
+    message.style.color = "#1bbe8d";
+    message.textContent = "Player " + player + " Wins!";
+    rollBtn.style.display = "none";
+    console.log("a player has won!");
+}
 
 //reset the game!
 function resetGame(){
+
+    /* this keeps breaking - some value somewhere isn't getting truly reset, causing the game to be over the first roll
+
+        scoreDisplay(p1Score, p1Dice, p1ScoreDisplay);
+        scoreDisplay(p2Score, p2Dice, p2ScoreDisplay);
+    */
     p1Score = 0;
     p2Score = 0;
     p1ScoreDisplay.textContent = 0;
     p2ScoreDisplay.textContent = 0;
     p1Dice.textContent = '-';
     p2Dice.textContent = '-';
+
     currentPlayer.textContent = 1;
     message.style.color = 'black';
     message.innerHTML = 'Player <span id="player">1</span> Turn';
     resetBtn.style.display = "none";
+    rollBtn.style.display = "inline-block";
 }
 
-// need to forcefully end the game as soon as someone wins
-//test
+/*
+function scoreDisplay(player, dice, score) {
+    player = 0;
+    dice.textContent = '-';
+    score.textContent = 0;
+    console.log(player, dice, score);
+}
+*/
