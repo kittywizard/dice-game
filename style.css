@@ -6,6 +6,8 @@ body {
     letter-spacing: 2px;
 }
 
+/* layout */
+
 .row {
     display: inline-block;
     margin: 2em;
@@ -17,17 +19,18 @@ body {
 
 .container {
     background-color: #ffffff;
-    width: 50%;
+    width: 75%;
     margin: 0 auto;
     padding: 0.7em;
     border-radius: 20px;
 }
 
 .bottom {
-    /* figure out how to center these?? */
-    width: 300px;
+    width: inherit;
     margin: 0 auto;
 }
+
+/* typography */
 
 h1 {
     text-transform: uppercase;
@@ -40,6 +43,13 @@ h1 {
     padding: 4px 25px; 
     border-radius: 4px;
 }
+
+#p1Score, #p2Score {
+    color: #1bbe8d;
+}
+
+
+/* dice design */
 
 .dice {
     width: 100px;
@@ -55,10 +65,6 @@ h1 {
 
 .dice p {
     margin-top: 18px;
-}
-
-#p1Score, #p2Score {
-    color: #1bbe8d;
 }
 
 /* button design */
@@ -77,5 +83,10 @@ h1 {
 }
 
 .btn:hover, .btn:focus {
-    background-color: #84eadf;
+    background-color: #1bbe8d;
+    color: #fff;
+}
+
+#reset {
+    display: none; /*hide this button at the start */
 }
