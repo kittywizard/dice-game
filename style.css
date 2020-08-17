@@ -30,6 +30,22 @@ body {
     margin: 0 auto;
 }
 
+/* rules modal */
+
+#modal {
+    background-color: #e3ecca;
+    width: 50%;
+    height: 25%;
+    border-radius: 5px;
+    padding: 10px;
+    display: none;
+}
+
+#modal ol {
+    text-align: left;
+}
+
+
 /* typography */
 
 h1 {
