@@ -38,7 +38,7 @@ body {
     height: 25%;
     border-radius: 5px;
     padding: 10px;
-    display: none;
+    display: block;
 }
 
 #modal ol {
@@ -83,6 +83,12 @@ h1 {
     margin-top: 18px;
 }
 
+.dice-btn {
+    background-color: #fff;
+    padding: 10px;
+    border: unset;
+    border-radius: 10px;
+}
 /* button design */
 
 .btn {
