@@ -2,7 +2,7 @@
 let p1Score = 0;
 let p2Score = 0;
 
-// who's turn is it? 
+// whose turn is it? 
 let currentTurn = true;
     // p1 true
     // p2 false
@@ -19,10 +19,20 @@ const p2Dice = document.getElementById('p2Dice');
 
 const rollBtn = document.getElementById("roll");
 const resetBtn = document.getElementById("reset");
+const startBtn = document.querySelector('.dice-btn');
 
 //set event listeners
 resetBtn.addEventListener('click', resetGame);
 rollBtn.addEventListener('click', rollDice);
+startBtn.addEventListener('click', startGame);
+
+function startGame() {
+    //random number generator
+        //math.floor random * 20 or whatever
+    //need to unhide all the rest of the game
+    //hide this modal
+    //then we can wait for the event listeners on the other buttons
+}
 
 //roll the dice when button is clicked
 function rollDice(){
